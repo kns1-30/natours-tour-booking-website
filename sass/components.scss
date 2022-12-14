@@ -1,7 +1,10 @@
+
+
+
 // buttons
 
 .btn:link,
-.btn-visited {
+.btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -14,6 +17,11 @@
 .btn-white {
   background-color: white;
   color: $color-gray-dark;
+}
+
+.btn-green{
+  background-color: $color-primary;
+  color: white;
 }
 
 .btn:hover {
