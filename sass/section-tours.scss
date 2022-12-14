@@ -26,6 +26,7 @@
     backface-visibility: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     border-radius: 3px;
+
   &-front{
 
     // &-1{
@@ -71,8 +72,10 @@
     background-size: cover;
     height: 50%;
     background-blend-mode:screen;
+
     -webkit-clip-path:polygon(0 0,100% 0,100% 85%, 0 100%);
     clip-path: polygon(0 0,100% 0,100% 85%, 0 100%);
+
 
     &-1{
       background-image: linear-gradient(to right bottom , $color-secondary-light-1, $color-secondary-dark-1), url(../img/nat-5.jpg);
