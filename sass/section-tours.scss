@@ -2,7 +2,7 @@
 
 .section-tours{
   background-color: $color-gray-light-1;
-  padding: 15rem 5rem 30rem;
+  padding: 15rem 5rem 3rem;
   margin-top:-19vh;
 }
 
@@ -158,14 +158,14 @@
     }
     &-price-only{
       font-size:$default-font-size;
-      text-transform:uppercase;
+      // text-transform:uppercase;
 
     }
 
     &-price-value{
-
-        font-size:4rem;
         font-weight:100;
+        font-size:4rem;
+
     }
 
   }

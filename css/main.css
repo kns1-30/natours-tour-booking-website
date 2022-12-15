@@ -400,7 +400,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 15rem 5rem 30rem;
+  padding: 15rem 5rem 3rem;
   margin-top: -19vh;
 }
 
@@ -511,9 +511,82 @@ body {
 }
 .card-price-only {
   font-size: 1.2rem;
-  text-transform: uppercase;
 }
 .card-price-value {
-  font-size: 4rem;
   font-weight: 100;
+  font-size: 4rem;
+}
+
+.section-stories {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.bg-video {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+.bg-video-content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 6rem;
+  transform: skewX(-15deg);
+}
+.story-shape {
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-2rem) skewX(15deg);
+  overflow: hidden;
+}
+.story-shape-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.story-shape-img {
+  height: 100%;
+  transform: translateX(-2.5rem) scale(1.4);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.2s;
+}
+.story-shape:hover .story-shape-name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story-shape:hover .story-shape-img {
+  filter: blur(3px);
+  transform: translateX(-2.5rem) scale(1);
+}
+.story-text {
+  transform: skewX(15deg);
 }/*# sourceMappingURL=main.css.map */
