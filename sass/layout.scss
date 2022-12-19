@@ -9,22 +9,10 @@
     margin-bottom: 30px;
   }
 
-  &-sub {
-    display: block;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 17px;
-    /* animation-name: moveinright;
-      animation-duration: 1s;
-      animation-timing-function: ease-out; */
-
-    animation: moveinright 1s ease-out;
-  }
-
   &-main {
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: 25px;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
     display: block;
     animation-name: moveinleft;
     animation-duration: 1s;
@@ -33,11 +21,34 @@
       animation-iteration-count: 3; */
 
     animation-timing-function: ease-out;
+
+    @include respond(phone){
+      font-size: 4rem;
+      letter-spacing: 1rem;
+    }
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    /* animation-name: moveinright;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; */
+
+    animation: moveinright 1s ease-out;
+
+    @include respond(phone){
+      // font-size: 4rem;
+      letter-spacing: 5px;
+    }
+
   }
 
   &-secondary{
     // margin-top:25vh;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight:700;
     text-transform: uppercase;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
@@ -51,8 +62,13 @@
 
       transform: skewY(2deg) skewX(15deg) scale(1.1);
       text-shadow: 5px 10px 20px rgba(0, 0, 0,0.3);
+    }
+
+    @include respond(phone){
+       font-size: 2.5rem;
 
     }
+
   }
 
   &-tertiary{

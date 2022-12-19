@@ -18,6 +18,16 @@
     text-align: center;
     cursor:pointer;
 
+    @include respond(tab-port){
+      top:2rem;
+      right:2rem;
+    }
+
+
+    @include respond(sm-phone){
+      top:1.5rem;
+      right:1.5rem;
+    }
   }
 
   &-background{
@@ -30,6 +40,16 @@
     z-index: 100;
     transition: transform .8s cubic-bezier(0.86,0,0.2,1);
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
+
+    @include respond(tab-port){
+      top:2.5rem;
+      right:2.5rem;
+    }
+
+    @include respond(sm-phone){
+      top:1.5rem;
+      right:1.5rem;
+    }
   }
 
   &-nav{

@@ -7,7 +7,7 @@
 
 html{
 // this defines what 1rem is
-font-size: 90%;  // 1 rem =10px 10/16 = 62.5%;
+font-size: 75%;  // 1 rem =10px 10/16 = 62.5%;
 
 @include respond(tab-land){
   font-size: 56.25%;  //9
@@ -18,20 +18,41 @@ font-size: 90%;  // 1 rem =10px 10/16 = 62.5%;
 }
 
 @include respond(phone){
-  font-size: 50%;
+  font-size: 45%;
+}
+@include respond(sm-phone){
+  font-size: 40%;
 }
 
-
-@include respond(big-desktop){
+@include respond(bg-desktop){
   font-size: 80%;  //12
 }
 }
 body {
   font-family: "Lato", sans-serif;
-  padding: 30px;
+  padding: 3rem;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: $default-font-size;
   color: $color-gray-dark;
   background-color: $color-gray-light-1;
+
+  @include respond(tab-port){
+    padding:0;
+  }
 }
+
+::selection{
+  background-color: $color-primary;
+  color:white;
+}
+
+// @supports
+
+// @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter:blur(10px))
+// {
+//   -webkit-backdrop-filter: blur(10px) ;
+//   backdrop-filter:blur(10px);
+//   background-color: rgba(black,0.3);
+
+// }

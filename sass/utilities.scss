@@ -9,7 +9,7 @@
 }
 
 .margin-bottom-med{
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .margin-bottom-small{
@@ -17,9 +17,20 @@
 }
 
 .margin-top-big{
-  margin-top: 8rem;
+  margin-top: 6rem;
+}
+
+.margin-top-med{
+  margin-top: 4rem;
 }
 
 .margin-top-small{
   margin-top: 2rem;
+}
+
+.margin-bottom-custom{
+  margin-bottom: 6rem;
+  @include respond(phone){
+    margin-bottom: 2rem !important;
+  }
 }

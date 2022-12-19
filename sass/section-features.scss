@@ -1,6 +1,6 @@
 .section-features{
-  margin-top:-20vh;
-  padding:10rem 3rem;
+  //margin-top:-10vh;
+  padding:5rem 3rem 10rem;
   background-image: linear-gradient(to right , rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   background-position: top;
@@ -13,6 +13,11 @@
     transform:skewY(7deg);
   }
 
+
+    @include respond(phone){
+      margin-top:0;
+      //padding:5rem 3rem 10rem;
+  }
 }
 
 .feature-box{

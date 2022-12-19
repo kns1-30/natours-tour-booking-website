@@ -38,19 +38,35 @@
   padding:6rem;
   transform: skewX(-15deg);
 
+  @include respond(phone){
+    width:100%;
+    padding:3rem;
+    transform: skewX(0);
+  }
+
   &-shape{
     height:10rem;
     width:10rem;
     position: relative;;
     float:left;
     // the element must be floated for this and needs dimensions width height
-    shape-outside: circle(50% at 50% 50%);
-     -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+   border-radius:50%;
     // border-radius: 50%;
     transform: translateX(-2rem) skewX(15deg);;
     overflow: hidden;
 
+    @supports (clip-path: polygon(0 0) or (-webkit-clip-path: polygon(0 0))){
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius:none;
+    }
+
+
+    @include respond(phone){
+
+      transform: translateX(-2rem) skewX(0);
+    }
 
     &-name{
       position:absolute;
@@ -91,6 +107,10 @@
 
   &-text{
     transform:skewX(15deg);
+
+    @include respond(phone){
+      transform: skewX(0);
+    }
   }
 
 }

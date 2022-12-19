@@ -1,19 +1,22 @@
 .footer{
   background-color: $color-gray-dark-2;
-  padding: 10rem 0 5rem;
+  padding: 4rem;
   font-size:$default-font-size;
 
+//   @include respond(phone){
+//    padding:4rem 0;
+// }
+
 &-logo-box{
-  width:5rem;
-  height:auto;
-  margin:0 auto;
+
+  //margin:0 auto;
   // innline element behaves like text
-  // display: inline-block;
-  // text-align: center;
+  text-align: center;
 }
 
 &-logo{
-  transform: translate(-50%,-50%);
+  width:15rem;
+  height:auto;
 }
 
 &-navigation{
@@ -23,6 +26,12 @@
   margin-left: 1.5rem;
   border-top: 1px solid $color-gray-dark;
   padding-top: 2rem;
+
+  @include respond(phone){
+   width:100%;
+   text-align: center;
+ }
+
 }
 
 &-list{
@@ -71,5 +80,11 @@ display:inline-block;
     text-align: right;
     margin-right:1.5rem;
     float:right;
+
+    @include respond(phone){
+      width:100%;
+      text-align: center;
+      float: none
+    }
   }
 }

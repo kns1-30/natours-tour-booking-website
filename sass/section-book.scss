@@ -1,8 +1,6 @@
 .section-book{
-  padding:0 7rem;
+  padding:0 7rem 8rem;
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  height:50rem;
-
 }
 
 
@@ -12,10 +10,26 @@
   transparent 50% ),
   url(../img/nat-10.jpg);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0,0.3);
-  height:31rem;
   background-size: 100%;
   border-radius: 3px;
   background-image: cover;
+
+
+  @include respond(tab-land){
+    background-image:linear-gradient(105deg, rgba(white,0.9) 0% ,
+    rgba(white,0.8) 65% ,
+    transparent 65% ),
+    url(../img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include respond(phone){
+    background-image:linear-gradient(to right, rgba(white,0.9) 0% ,
+    rgba(white,0.9) 100% ,
+    ),
+    url(../img/nat-10.jpg);
+    background-size: cover;
+  }
 
 &-block{
   padding-top:1rem;
@@ -23,10 +37,15 @@
 }
 
 .form{
-
   width:50%;
   padding:2rem;
 
+  @include respond(tab-land){
+    width:65%;
+}
+@include respond(phone){
+  width:100%;
+}
   &-group:not(:last-child){
     margin-bottom: 2rem;
   }
@@ -45,7 +64,7 @@
 
 
     &::-webkit-input-placeholder{
-      color: $color-primary;
+      color: $color-gray-dark;
       font-size: 1rem;
     }
 
@@ -83,6 +102,10 @@
     width:50%;
     float: left;
 
+    @include respond(phone){
+      width:100%;
+      margin-bottom:2rem;
+  }
   }
 
   &-radio-input{

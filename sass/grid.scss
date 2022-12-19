@@ -3,11 +3,19 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include respond(phone){
+    max-width: 60rem;
+    padding: 0 3rem;
+  }
+
   &:first-child {
     margin-top: 8rem;
   }
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(phone){
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -19,6 +27,14 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(phone){
+        margin-right:0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(phone){
+      width:100% !important;
     }
   }
 

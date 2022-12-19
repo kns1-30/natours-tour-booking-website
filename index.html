@@ -45,10 +45,10 @@
       <div class="text-box">
         <h1 class="heading">
           <span class="heading-main"> OUTDOORS </span>
-          <span class="heading-sub"> IS WHERE LIFE HAPPENS </span>
+          <span class="heading-sub margin-top-small"> IS WHERE LIFE HAPPENS </span>
         </h1>
 
-        <a href="#" class="btn btn-white btn-animated"> Discover Our Tours</a>
+        <a href="#" class="btn btn-white btn-animated margin-top-med"> Discover Our Tours</a>
       </div>
     </header>
 
@@ -72,8 +72,8 @@
 
     <main>
       <section class="section-about">
-        <div class="center-text margin-bottom-big">
-          <h2 class="heading-secondary">
+        <div class="center-text">
+          <h2 class="heading-secondary margin-bottom-custom">
             Exciting tours for adventourous people
           </h2>
         </div>
@@ -99,6 +99,12 @@
           </div>
           <div class="col-1-2">
             <div class="composition">
+              <!-- resolution switching ... mention width of image so browser knows without having to download-->
+                <!-- <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25px) 20vw, (max-width:37.5px) 30vw, 300px"
+                alt="natures" class="composition__photo composition__photo-p1"
+                src="img/nat-1-large.jpg"
+                > -->
                 <img src="img/nat-1-large.jpg" alt="natures" class="composition__photo composition__photo-p1">
                 <img src="img/nat-2-large.jpg" alt="natures" class="composition__photo composition__photo-p2">
                 <img src="img/nat-3-large.jpg" alt="natures" class="composition__photo composition__photo-p3">
@@ -156,7 +162,7 @@
       </section>
 
       <section class="section-tours">
-        <div class="center-text margin-bottom-big">
+        <div class="center-text margin-bottom-med">
           <h2 class="heading-secondary">
             Most Popular Tours
           </h2>
@@ -176,7 +182,7 @@
 
                     </h4>
 
-                    <div class="card-details">
+                    <div class="card-details margin-bottom-small">
                         <ul>
                           <li>3 day tours</li>
                           <li>Upto 30 people</li>
@@ -295,7 +301,7 @@
             Your browser is not supporrted!
                 </video>
         </div>
-        <div class="center-text margin-top-small margin-bottom-small">
+        <div class="center-text margin-top-small margin-bottom-med">
           <h2 class="heading-secondary">
             We make people happy
           </h2>
@@ -399,8 +405,13 @@
       </section>
 
 <footer class="footer">
-  <div class="footer-logo-box">
-    <img src="img/logo-green-2x.png" alt="logo" class="footer-logo">
+  <div class="footer-logo-box margin-bottom-med">
+    <picture class="footer-logo">
+<source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x," media="(max-width:37.5em)">
+<img srcset="img/logo-green-1x.png 1x, /logo-green-2x.png 2x" alt="logo" class="footer-logo">
+    </picture>
+    <!-- density switching srcset -->
+
   </div>
   <div class="row">
     <div class="col-1-2">

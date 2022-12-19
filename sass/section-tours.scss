@@ -2,8 +2,7 @@
 
 .section-tours{
   background-color: $color-gray-light-1;
-  padding: 15rem 5rem 3rem;
-  margin-top:-19vh;
+  padding: 10rem 5rem 3rem;
 }
 
 // card
@@ -14,14 +13,14 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 42rem;
+  height: 50rem;
   &-side{
 
     transition: all 0.8s ease;
     position: absolute;
     top:0;
     left:0;
-    height: 42rem;
+    height: 50rem;
     width:100%;
     backface-visibility: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
@@ -121,7 +120,7 @@
   }
 
   &-details{
-
+    padding:0 3rem 3rem;
     ul{
       margin: 0 auto;
       list-style:none;
@@ -129,7 +128,7 @@
 
       li{
          text-align:center;
-        font-size:1rem;
+        font-size:$default-font-size;
         padding:1rem;
 
         &:first-child{
@@ -149,6 +148,7 @@
       top:50%;
       left:50%;
       transform:translate(-50%,-50%);
+      text-align: center;
     }
 
     &-price{
@@ -164,8 +164,71 @@
 
     &-price-value{
         font-weight:100;
-        font-size:4rem;
+        font-size:6rem;
 
     }
 
+
+
+    // @include respond(tab-port){
+
+    @media only screen and (max-width:56.25em),
+    only screen and (hover:none) {
+      //  for device that does not touch as primary input
+      height: auto;
+      border-radius: 3px;
+      background-color: white;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      &-side{
+        position: relative;
+        height:55rem;
+        box-shadow: none;
+      &-back{
+        height:auto;
+        padding-bottom: 4rem;
+        transform : rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+      }
+
+
+      &-details{
+        padding:1rem;
+        ul{
+          li{
+            font-size:1.8rem;
+
+          }
+        }
+      }
+
+      &:hover &-side-front{
+        transform: rotateY(0deg);
+      }
+
+        //back-side styling
+
+        &-cta{
+          position:relative;
+          top:0;
+          left:0;
+          width:100%;
+          transform:translate(0);
+        }
+
+        &-price{
+          color:white;
+          margin-bottom:4rem;
+          text-align: center;
+        }
+
+        &-price-only{
+          padding-top:8rem;
+        }
+        &-price-value{
+            font-weight:100;
+            font-size:6rem;
+
+        }
+    }
   }
